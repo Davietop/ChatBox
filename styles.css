@@ -1,0 +1,726 @@
+body {
+  background-color: black;
+  color: white;
+}
+*::-webkit-scrollbar {
+  width: 0px;
+}
+#tog {
+  display: none;
+}
+#text {
+  padding: 5px;
+}
+
+@media (max-width: 600px) {
+  #app #details {
+    margin: 10%;
+    height: auto;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #app #details .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #app #details .icons .fa-facebook-f {
+    background-color: blue;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+  }
+  #app #details .icons .fa-google-plus-g {
+    background-color: red;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+  }
+  #app #details .icons .fa-linkedin-in {
+    background-color: darkblue;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+  }
+  #app #details .hr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #app #details .hr .first {
+    width: 50px;
+  }
+  #app #details .hr p {
+    margin: 10px;
+  }
+  #app #details .hr .second {
+    width: 50px;
+  }
+  #app #details #username {
+    width: auto;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid white;
+  }
+  #app #details #password {
+    width: auto;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    border: 1px solid white;
+  }
+  #app #details #tog {
+    position: relative;
+    left: auto;
+    top: -5.3%;
+    color: red;
+  }
+  #app #details #error {
+    text-align: center;
+  }
+  #app #details #btn2 {
+    width: 30%;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid white;
+  }
+  main #chat-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10%;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    /* border-radius: 10px; */
+    border: rgba(255, 255, 255, 0.18);
+  }
+  main #chat-page #chatBox {
+    height: 500px;
+    border-radius: 30px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: auto;
+    border-bottom-style: none;
+    overflow: auto;
+  }
+  main #chat-page #type {
+    height: 80px;
+    margin-top: -3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width: auto;
+    border-top-style: none;
+  }
+
+  main #chat-page #type #hometxt #text {
+    height: 40px;
+    width: 150px;
+    resize: none;
+    margin-top: 18px;
+    border: 1px solid white;
+    border-radius: 10px;
+  }
+  main #chat-page #chatBox .top-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  main #chat-page #chatBox .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 100px;
+
+    height: 90%;
+    margin-top: 0;
+    position: relative;
+    z-index: 100;
+    display: none;
+  }
+  main #chat-page #chatBox .show2 {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 100px;
+
+    height: 90%;
+    margin-top: 0;
+    position: relative;
+    z-index: 100;
+    text-align: center;
+  }
+  main #chat-page #chatBox .info #img {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+  }
+
+  main #chat-page #chatBox .icon {
+    position: absolute;
+    left: 20px;
+    bottom: 120px;
+    display: none;
+  }
+  main #chat-page #chatBox .show {
+    display: block;
+  }
+  main #chat-page #chatBox .icon .fa-file {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    border: 1px solid white;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 500px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    animation-name: good;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+  }
+  main #chat-page #chatBox .icon .fa-camera {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    border: 1px solid white;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 500px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    animation-name: good;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+  }
+  main #chat-page #chatBox .icon .fa-user {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    border: 1px solid white;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 500px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    animation-name: good;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+  }
+  main #chat-page #chatBox .icon .fa-location-dot {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    border: 1px solid white;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 500px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    animation-name: good;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+  }
+  #chatBox .message {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    width: auto;
+    border-radius: 20px;
+
+    margin-bottom: 20px;
+    margin-left: 45%;
+  }
+  #chat-page #chatBox #message {
+    margin-top: 5%;
+  }
+}
+@media (max-width: 435px) {
+  #app #details h1 {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    width: auto;
+  }
+
+  #app #details #tog {
+    position: relative;
+    left: auto;
+    top: -26px;
+    color: black;
+  }
+  main #chat-page #type #hometxt #text {
+    border-radius: 10px;
+  }
+  main #chat-page #chatBox .top-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  main #chat-page #chatBox .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 100px;
+
+    height: 80%;
+    position: relative;
+    z-index: 100;
+    display: none;
+  }
+  main #chat-page #chatBox .show2 {
+    display: block;
+
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 100;
+    justify-content: center;
+  }
+  main #chat-page #chatBox .info #img {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+  }
+}
+@media (min-width: 416px) {
+  main #chat-page #type #hometxt #text {
+    height: 40px;
+    width: 100%;
+    resize: none;
+    margin-top: 18px;
+    border-radius: 10px;
+  }
+
+  #chatBox .message {
+    background-color: white;
+    color: black;
+    padding: 15px;
+    width: auto;
+    border-radius: 20px;
+
+    margin-bottom: 20px;
+    /* margin-left: 35%; */
+  }
+  #chat-page #chatBox #message {
+    margin-top: 5%;
+  }
+}
+@media (min-width: 417px) {
+  #chatBox .message {
+    background-color: white;
+    color: black;
+    padding: 15px;
+    width: 45%;
+    border-radius: 20px;
+  }
+}
+@media (min-width: 600px) {
+  #app #details {
+    margin: 10%;
+    height: auto;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #app .check {
+    display: block;
+  }
+  #app #details .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #app #details .icons .fa-facebook-f {
+    background-color: blue;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+  }
+  #app #details .icons .fa-google-plus-g {
+    background-color: red;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+  }
+  #app #details .icons .fa-linkedin-in {
+    background-color: darkblue;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+  }
+  #app #details .hr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #app #details .hr .first {
+    width: 50px;
+  }
+  #app #details .hr p {
+    margin: 10px;
+  }
+  #app #details .hr .second {
+    width: 50px;
+  }
+  #app #details #username {
+    width: 50%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid white;
+  }
+  #app #details #password {
+    width: 50%;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    border: 1px solid white;
+  }
+  #app #details #tog {
+    position: relative;
+    left: auto;
+    top: -5.3%;
+    color: red;
+  }
+  #app #details #error {
+    text-align: center;
+  }
+  #app #details #btn2 {
+    width: 30%;
+    padding: 10px;
+    border-radius: 15px;
+
+    border: 1px solid white;
+  }
+  main #chat-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10%;
+  }
+  main #chat-page #chatBox {
+    height: 500px;
+    border-radius: 30px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: auto;
+    border-bottom-style: none;
+    overflow: auto;
+  }
+  main #chat-page #type {
+    height: 80px;
+    margin-top: -3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width: auto;
+    border-top-style: none;
+  }
+  main #chat-page #type #hometxt #text {
+    height: 40px;
+    width: 350px;
+    resize: none;
+    margin-top: 18px;
+    border: 1px solid white;
+    border-radius: 10px;
+  }
+  main #chat-page #chatBox .icon {
+    position: absolute;
+    left: 100px;
+    bottom: 250px;
+    display: none;
+  }
+  main #chat-page #chatBox.show {
+    display: block;
+  }
+  main #chat-page #chatBox .icon .fa-file {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    border: 1px solid white;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 500px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    animation-name: good;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+  }
+  main #chat-page #chatBox .icon .fa-camera {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    border: 1px solid white;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 500px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    animation-name: good;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+  }
+  main #chat-page #chatBox .icon .fa-user {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    border: 1px solid white;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 500px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    animation-name: good;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+  }
+  main #chat-page #chatBox .icon .fa-location-dot {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    border: 1px solid white;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 500px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    animation-name: good;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+  }
+  main #chat-page #chatBox .top-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  main #chat-page #chatBox .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 100px;
+
+    height: 90%;
+    margin-top: 0;
+    position: relative;
+    z-index: 100;
+    display: none;
+  }
+  main #chat-page #chatBox .show2 {
+    display: block;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 100;
+  }
+  main #chat-page #chatBox .info #img {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+  }
+  #chatBox .message {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    width: auto;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-left: 50%;
+  }
+  #chat-page #chatBox #message {
+    margin-top: 5%;
+  }
+}
+@media (min-width: 712px) {
+  main #chat-page #chatBox .icon {
+    display: none;
+  }
+  #chatBox .message {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    width: auto;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  #chat-page #chatBox #message {
+    margin-top: 5%;
+  }
+}
+@media (min-width: 1016px) {
+  main #chat-page #chatBox .icon {
+    display: none;
+  }
+  #app {
+    width: 800px;
+    margin-left: 15%;
+  }
+  main #chat-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10%;
+    margin-left: 25%;
+  }
+  main #chat-page #chatBox {
+    height: 500px;
+    border-radius: 30px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 800px;
+    border-bottom-style: none;
+    overflow: auto;
+  }
+  main #chat-page #type {
+    height: 80px;
+    margin-top: -3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width: 800px;
+    border-top-style: none;
+  }
+  main #chat-page #type #hometxt #text {
+    height: 40px;
+    width: 400px;
+    resize: none;
+    margin-top: 18px;
+    border: 1px solid white;
+    border-radius: 10px;
+  }
+}
+@media (min-width: 1555px) {
+  #app {
+    margin-left: 20%;
+    margin-top: 25px;
+  }
+}
+@media (min-width: 1024px) {
+  main #chat-page {
+    margin-left: 10%;
+    margin-top: 25px;
+  }
+  main #chat-page #chatBox .icon {
+    display: none;
+  }
+  main #chat-page #type #hometxt #text {
+    height: 50px;
+    border-radius: 10px;
+  }
+}
+@media (min-width: 1280px) {
+  main #chat-page {
+    margin-left: 23%;
+    margin-top: 25px;
+  }
+}
+
+@keyframes good {
+  0% {
+    height: 0;
+    opacity: 0;
+    width: 0;
+  }
+  25% {
+    opacity: 50%;
+    height: 40px;
+    width: 40px;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}

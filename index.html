@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatBox</title>
+    <script
+      src="https://kit.fontawesome.com/e031052f8a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <section id="app">
+        <fieldset id="details">
+          <h1>Login to Your Account</h1>
+          <p>Login using social networks</p>
+          <section class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-google-plus-g"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+          </section>
+
+          <section class="hr">
+            <hr class="first" />
+            <p>OR</p>
+            <hr class="second" />
+          </section>
+
+          <input type="text" name="" id="username" placeholder="Username" />
+          <input
+            type="password"
+            name=""
+            id="password"
+            placeholder="Password"
+            maxlength="4"
+          />
+          <i id="tog" class="fas fa-solid fa-eye-slash"></i>
+
+          <p id="error">Invalid username or password combination</p>
+
+          <input type="submit" id="btn2" value="LOG IN" />
+        </fieldset>
+      </section>
+
+      <section id="chat-page">
+        <fieldset id="chatBox">
+          <section class="top-info">
+            <p id="chat">Chat</p>
+            <p class="chatname">Profile</p>
+          </section>
+          <section class="info">
+            <img src="PICTURE.jpg" alt="" id="img" />
+            <p id="currentName">Felix james</p>
+            <p id="currentNo">090895678</p>
+            <p id="hobbies"></p>
+          </section>
+          <section id="message"></section>
+
+          <section class="icon">
+            <i class="fa-solid fa-file"></i>
+            <i class="fa-solid fa-camera"></i>
+            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-location-dot"></i>
+          </section>
+        </fieldset>
+        <fieldset id="type">
+          <section class="plus">
+            <i class="fa-solid fa-plus"></i>
+          </section>
+          <section id="hometxt">
+            <textarea name="" id="text" cols="30" rows="5"></textarea>
+          </section>
+          <section class="plane">
+            <i id="send" class="fa-solid fa-paper-plane"></i>
+          </section>
+        </fieldset>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
